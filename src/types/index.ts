@@ -37,6 +37,21 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 // Section Data Types
 // ==========================================
 
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export interface MenuItem {
+  label: string;
+  href: string;
+}
+
+// * Section About
+export interface BrandLogo {
+  src: string;
+  alt: string;
+}
+
 /**
  * TODO: Define interfaces untuk data yang digunakan di sections
  *

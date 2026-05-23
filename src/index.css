@@ -5,7 +5,9 @@
  * Docs: https://tailwindcss.com/docs/installation/using-vite
  */
 
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand&display=swap');
+
+@import 'tailwindcss';
 
 /* Tell Tailwind where to scan for classes */
 @source "./**/*.{js,jsx,ts,tsx}";
@@ -18,9 +20,43 @@
  * Prefer using Tailwind utilities in components
  */
 
+@theme {
+  /* 1. Primitive Tokens (Warna Dasar) */
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+
+  --color-primary-100: #ffe0d8;
+  --color-primary-200: #ff623e;
+  --color-primary-300: #cc4e32;
+  --color-primary-400: #80311f;
+
+  --shadow-button-inset: inset 4px 4px 4px 0px rgba(255, 255, 255, 0.25);
+
+  --font-sans: 'Quicksand', sans-serif;
+
+  /* Set default centering */
+  --container-center: true;
+
+  /* Set responsive padding */
+  --container-padding: 1rem;
+  --container-padding-sm: 2rem;
+  --container-padding-lg: 4rem;
+  --container-padding-xl: 5rem;
+  --container-padding-2xl: 6rem;
+}
+
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
+}
+
+@layer base {
+  html,
+  body {
+    /* Directly assign the variable to eliminate compile loops */
+    background-color: var(--color-base-black);
+    @apply font-sans text-slate-100 antialiased;
+  }
 }
 
 /* Optional: Custom scrollbar styles */
