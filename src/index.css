@@ -20,10 +20,17 @@
  * Prefer using Tailwind utilities in components
  */
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* 1. Primitive Tokens (Warna Dasar) */
   --color-base-white: #ffffff;
   --color-base-black: #000000;
+
+  --color-natural-900: #181d27;
+  --color-natural-950: #0a0d12;
+  --color-natural-50: #fafafa;
+  --color-natural-150: #dedcdc;
 
   --color-primary-100: #ffe0d8;
   --color-primary-200: #ff623e;
@@ -43,6 +50,18 @@
   --container-padding-lg: 4rem;
   --container-padding-xl: 5rem;
   --container-padding-2xl: 6rem;
+
+  /* Menambahkan spacing otomatis (fluid spacing) */
+  --spacing-container-padding: clamp(1rem, 6vw, 8.75rem);
+  --height-navbar: clamp(3.5rem, 5vw, 4.5rem);
+
+  /* card untuk timeline/our process */
+  --width-card-half: 26rem;
+  --min-height-card-row: 7px;
+
+  --spacing-navbar-px: 8.75rem; /* 140px / 16px = 8.75rem */
+  --text-fluid-hero: clamp(2.25rem, 1.785rem + 2.321vw, 3.5rem);
+  --text-fluid-title: clamp(1.5rem, 2.5vw + 1rem, 2.25rem);
 }
 
 /* Smooth scrolling for anchor links */
@@ -56,6 +75,20 @@ html {
     /* Directly assign the variable to eliminate compile loops */
     background-color: var(--color-base-black);
     @apply font-sans text-slate-100 antialiased;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply transition-colors duration-500 ease-in-out;
+  }
+}
+
+@utility text-main-color {
+  color: var(--color-natural-900);
+
+  @variant dark {
+    color: var(--color-natural-50);
   }
 }
 

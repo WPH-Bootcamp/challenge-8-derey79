@@ -23,3 +23,5 @@ export const logos: BrandLogo[] = [
   { src: Paypal, alt: 'Paypal Logo' },
   { src: Netflix, alt: 'Netflix Logo' },
 ];
+
+export const doubleLogos: BrandLogo[] = [...logos, ...logos];

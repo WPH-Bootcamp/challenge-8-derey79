@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface SectionProps {
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+import { type SectionProps } from '../../types';
 
 export const Section: React.FC<SectionProps> = ({
   id,
@@ -14,7 +9,7 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`py-12 md:py-20 lg:py-24 dark:border-gray-700/50 ${className}`.trim()}
+      className={`overflow-hidden bg-base-white dark:bg-base-black pb-8 ${className}`.trim()}
     >
       {children}
     </section>

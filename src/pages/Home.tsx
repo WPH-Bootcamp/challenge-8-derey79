@@ -1,22 +1,26 @@
-import { Layout } from '../components/layout/Layout';
-import HeroSection from '../components/sections/HeroSection';
+// import { Layout } from '../components/layout/Layout';
 import Navbar from '../components/layout/Navbar';
+import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
-// import BrandMarquee from '../components/sections/BrandMarquee';
-
+// import ServicesSection from '../components/sections/ServicesSection';
+// import IndustySection from '../components/sections/IndustySection';
 const Home = () => {
   return (
     <div className='min-h-screen'>
       <Navbar />
-      <Layout>
-        {/* <Navbar /> */}
-        <main>
+      <main>
+        <HeroSection />
+        <AboutSection />
+      </main>
+      {/* <Layout> */}
+      {/* <main>
           <HeroSection />
           <AboutSection />
-          {/* <BrandMarquee /> */}
-        </main>
+          <ServicesSection />
+          <IndustySection />
+        </main> */}
 
-        {/* <main>
+      {/* <main>
         <HeroSection />
         <AboutSection />
         <ServicesSection />
@@ -25,7 +29,7 @@ const Home = () => {
       </main>
 
       <Footer /> */}
-      </Layout>
+      {/* </Layout> */}
     </div>
   );
 };

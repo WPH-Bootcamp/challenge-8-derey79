@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react';
 /**
  * Type Definitions
  *
@@ -12,14 +13,48 @@
  */
 
 // ==========================================
-// UI Component Types
+// 💡 LAYOUT
 // ==========================================
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export interface SectionProps {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
+// ==========================================
+// 💡 THEME
+// ==========================================
+
+// ==========================================
+// 💡 NAVBAR
+// ==========================================
+export interface MenuItem {
+  label: string;
+  href: string;
+}
+
+// ==========================================
+// 🎨 UI & TAILWIND CSS COMPONENT INTERFACES
+// ==========================================
+// *** CONTEXT ***
+export type Theme = 'light' | 'dark';
+
+export interface ThemeContextType {
+  theme: Theme;
+  toggleTheme: () => void;
+}
 
 /**
  * Button variant types
  * Gunakan ini untuk Button component
  */
+// Type definition
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
 /**
  * Example: Button Props
@@ -33,23 +68,56 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 //   disabled?: boolean;
 // }
 
-// ==========================================
-// Section Data Types
-// ==========================================
-
-export interface LayoutProps {
-  children: React.ReactNode;
+export interface ButtonProps {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  children: ReactNode;
+  // onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  className?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
-export interface MenuItem {
-  label: string;
-  href: string;
-}
+// ==========================================
+// 📦 Section Data Types
+// ==========================================
 
 // * Section About
 export interface BrandLogo {
   src: string;
   alt: string;
+}
+
+export interface CardSolutionProps {
+  title: string;
+  description: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  desc: string;
+}
+
+export interface TimelineItem {
+  id: number;
+  text: string;
+  description: string;
+}
+
+export interface ZigZagTimelineProps {
+  items: TimelineItem[];
+}
+
+export interface SolutionCard {
+  title?: string;
+  description?: string;
+  iconImg?: string;
+  iconAlt?: string;
+}
+
+export interface SolutionCardProps {
+  items: SolutionCard[];
 }
 
 /**
