@@ -45,14 +45,14 @@ const Navbar: React.FC = () => {
       }`}
     >
       {/* <div className='container mx-auto px-4 flex justify-between items-center'> */}
-      <div className='w-full max-w-290 z-10 mx-auto px-4 flex justify-between items-center h-16'>
-        <div className='flex items-center gap-3 px-4 md:px-20'>
+      <div className='w-full max-w-5xl z-10 mx-auto flex justify-between items-center h-16 px-4'>
+        <div className='flex items-center gap-3'>
           <img
             src={logo}
             alt='Company Logo'
             className='h-full w-auto object-contain'
           />
-          <span className='text-2xl font-semibold tracking-wider space-y-6 text-main-color whitespace-nowrap'>
+          <span className='text-2xl font-bold tracking-tighter space-y-6 text-main-color whitespace-nowrap select-none'>
             Your Logo
           </span>
         </div>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                 ? 'Switch to dark theme'
                 : 'Switch to light theme'
             }
-            className='group p-2 rounded-lg bg-transparent text-gray-700 dark:text-gray-400 transition-colors duration-200 shrink-0'
+            className='group p-2 rounded-lg bg-transparent text-gray-700 dark:text-gray-400 transition-colors duration-200 shrink-0 select-none'
           >
             {theme === 'light' ? (
               <Moon
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleTheme}
             aria-label='Toggle theme'
-            className='group p-2 rounded-lg bg-transparent text-main-color transition-colors duration-200 shrink-0'
+            className='group p-2 rounded-lg bg-transparent text-main-color transition-colors duration-200 shrink-0 select-all'
           >
             {theme === 'light' ? (
               <Moon
@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
             <img
               src={isOpen ? X : Hamburger}
               alt={isOpen ? 'Close menu' : 'Open menu'}
-              className='w-6 h-6 object-contain dark:invert transition-all'
+              className='w-6 h-6 object-contain dark:invert transition-all select-none'
             />
           </button>
         </div>
