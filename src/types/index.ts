@@ -25,16 +25,33 @@ export interface SectionProps {
   children: React.ReactNode;
 }
 
+// Interface untuk Header setiap Section
+export interface SectionHeaderProps {
+  title: string;
+  description: string;
+  className?: string;
+}
+
 // ==========================================
 // 💡 THEME
 // ==========================================
 
 // ==========================================
-// 💡 NAVBAR
+// Navigation Types
 // ==========================================
+
+/**
+ * Navigation menu item
+ */
+// export interface NavItem {
+//   label: string;
+//   href: string;
+//   external?: boolean;
+// }
 export interface MenuItem {
   label: string;
   href: string;
+  external?: boolean;
 }
 
 // ==========================================
@@ -99,14 +116,20 @@ export interface ServiceItem {
   desc: string;
 }
 
+// Section Timeline
 export interface TimelineItem {
   id: number;
   text: string;
   description: string;
 }
 
-export interface ZigZagTimelineProps {
+export interface TimelineProps {
   items: TimelineItem[];
+}
+
+export interface TimelineCardProps {
+  title: string;
+  description: string;
 }
 
 export interface SolutionCard {
@@ -168,19 +191,6 @@ export interface SolutionCardProps {
 //   message: string;
 //   avatar?: string;
 //   rating?: number;
-// }
-
-// ==========================================
-// Navigation Types
-// ==========================================
-
-/**
- * Navigation menu item
- */
-// export interface NavItem {
-//   label: string;
-//   href: string;
-//   external?: boolean;
 // }
 
 // ==========================================
