@@ -9,7 +9,8 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`overflow-hidden bg-base-white dark:bg-base-black pb-8 ${className}`.trim()}
+      className={`overflow-hidden bg-base-white dark:bg-base-black ${className}`.trim()}
+      // className={`overflow-hidden bg-base-white dark:bg-base-black pt-12 pb-8 ${className}`.trim()}
     >
       {children}
     </section>
