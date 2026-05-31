@@ -3,7 +3,7 @@ import { type LayoutProps } from '../../types';
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className='mx-auto min-h-screen max-w-7xl overflow-hidden dark:bg-zinc-950 bg-zinc-50 px-4 lg:px-32'>
+    <div className='mx-auto min-h-screen max-w-5xl overflow-hidden bg-amber-200 border-2'>
       {children}
     </div>
   );
