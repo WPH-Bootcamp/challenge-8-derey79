@@ -1,16 +1,7 @@
 import { useEffect } from 'react';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import Button from './Button';
-import { motion, AnimatePresence } from 'framer-motion';
-import type { Variants } from 'framer-motion';
-
-interface ModalPopupProps {
-  isOpen: boolean;
-  onClose: () => void;
-  iconSrc: string;
-  title?: string;
-  description?: string;
-  buttonText?: string;
-}
+import type { ModalPopupProps } from '../../types';
 
 const fadeInUpVariants: Variants = {
   hidden: { opacity: 0, y: 10 },
@@ -21,7 +12,6 @@ const fadeInUpVariants: Variants = {
   },
 };
 
-// 2. Explicitly type the parent container animations
 const containerVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95, y: 15 },
   visible: {
@@ -46,7 +36,6 @@ export default function ModalPopup({
   description,
   buttonText,
 }: ModalPopupProps) {
-  // Return nothing if the modal is hidden
   useEffect(() => {
     if (!isOpen) return;
 
@@ -85,15 +74,13 @@ export default function ModalPopup({
             aria-label='Close modal backdrop'
           />
 
-          {/* Main Modal Box Container */}
           <motion.div
             initial='hidden'
             animate='visible'
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
-            variants={containerVariants} // 👈 Clean separation using typed object
+            variants={containerVariants}
             className='relative w-full max-w-sm rounded-2xl border border-gray-800 bg-[#0F0F0F] p-6 text-center shadow-2xl'
           >
-            {/* 1. Icon Animation */}
             <motion.div
               variants={fadeInUpVariants}
               className='mx-auto mb-4 flex h-36 w-36 items-center justify-center'
@@ -105,7 +92,6 @@ export default function ModalPopup({
               />
             </motion.div>
 
-            {/* 2. Title Animation */}
             <motion.h3
               variants={fadeInUpVariants}
               className='mb-2 text-lg font-semibold text-white'
@@ -113,7 +99,6 @@ export default function ModalPopup({
               {title}
             </motion.h3>
 
-            {/* 3. Description Animation */}
             <motion.p
               variants={fadeInUpVariants}
               className='mb-6 text-xs text-gray-400 leading-relaxed'
@@ -121,8 +106,6 @@ export default function ModalPopup({
               {description}
             </motion.p>
 
-            {/* 4. Button Animation Wrapper */}
-            {/* Wrapping it inside a standard motion.div avoids any strict custom prop signature issues */}
             <motion.div variants={fadeInUpVariants}>
               <Button
                 variant='primary'
