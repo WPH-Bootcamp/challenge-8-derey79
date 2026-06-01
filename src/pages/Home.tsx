@@ -1,35 +1,55 @@
-// import { Layout } from '../components/layout/Layout';
+import { Suspense, lazy } from 'react';
 import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+
+// Komponen yang langsung terlihat di layar (Above the fold)
 import HeroSection from '../components/sections/HeroSection';
-import AboutSection from '../components/sections/AboutSection';
-// import ServicesSection from '../components/sections/ServicesSection';
-// import IndustySection from '../components/sections/IndustySection';
+
+// Lazy load untuk komponen di bawah layar (Below the fold)
+const AboutSection = lazy(() => import('../components/sections/AboutSection'));
+const ServicesSection = lazy(
+  () => import('../components/sections/ServicesSection')
+);
+const IndustrySection = lazy(
+  () => import('../components/sections/IndustySection')
+);
+const ProjectSection = lazy(
+  () => import('../components/sections/ProjectSection')
+);
+const TestimonialSection = lazy(
+  () => import('../components/sections/TestimonialSection')
+);
+
+const FAQSection = lazy(() => import('../components/sections/FAQSection'));
+
+const ContactSection = lazy(
+  () => import('../components/sections/ContactSection')
+);
+
+// Komponen Loading sederhana (bisa diganti dengan skeleton UI)
+const SectionLoader = () => (
+  <div className='w-full h-32 flex items-center justify-center bg-base-white dark:bg-base-black text-lg font-light text-main-color'>
+    Loading section...
+  </div>
+);
 const Home = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen flex flex-col'>
       <Navbar />
-      <main>
+      <main className='grow'>
         <HeroSection />
-        <AboutSection />
-      </main>
-      {/* <Layout> */}
-      {/* <main>
-          <HeroSection />
+
+        <Suspense fallback={<SectionLoader />}>
           <AboutSection />
           <ServicesSection />
-          <IndustySection />
-        </main> */}
-
-      {/* <main>
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <TestimonialsSection />
-        <ContactSection />
+          <IndustrySection />
+          <ProjectSection />
+          <TestimonialSection />
+          <FAQSection />
+          <ContactSection />
+        </Suspense>
       </main>
-
-      <Footer /> */}
-      {/* </Layout> */}
+      <Footer />
     </div>
   );
 };
