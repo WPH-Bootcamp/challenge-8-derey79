@@ -1,16 +1,14 @@
-// import { type BrandLogo } from '../../types';
 import type { BrandLogo } from '../types';
 
-import AdobeLogo from '../../src/assets/adobe-logo.png';
-
-import UpworkLogo from '../../src/assets/upwork-logo.png';
-import ZoomLogo from '../../src/assets/zoom-logo.png';
-import PostmanLogo from '../../src/assets/postman-logo.png';
-import DatabricksLogo from '../../src/assets/databricks-logo.png';
-import AirbnbLogo from '../../src/assets/airbnb-logo.png';
-import DropboxLogo from '../../src/assets/drobbox-logo.png';
-import Paypal from '../../src/assets/paypal-logo.png';
-import Netflix from '../../src/assets/netflix-logo.png';
+import AdobeLogo from '@/assets/adobe-logo.png';
+import UpworkLogo from '@/assets/upwork-logo.png';
+import ZoomLogo from '@/assets/zoom-logo.png';
+import PostmanLogo from '@/assets/postman-logo.png';
+import DatabricksLogo from '@/assets/databricks-logo.png';
+import AirbnbLogo from '@/assets/airbnb-logo.png';
+import DropboxLogo from '@/assets/drobbox-logo.png';
+import Paypal from '@/assets/paypal-logo.png';
+import Netflix from '@/assets/netflix-logo.png';
 
 export const logos: BrandLogo[] = [
   { src: AdobeLogo, alt: 'Adobe Logo' },
