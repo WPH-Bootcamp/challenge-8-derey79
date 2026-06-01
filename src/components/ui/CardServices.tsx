@@ -1,12 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
-
-interface SolutionCardProps {
-  title: string;
-  description: string;
-  iconImg: string;
-  iconAlt?: string;
-}
+import { type SolutionCardProps } from '@/types';
 
 export const CardServices: React.FC<SolutionCardProps> = ({
   title,
