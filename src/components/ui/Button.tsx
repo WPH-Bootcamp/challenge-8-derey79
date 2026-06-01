@@ -1,5 +1,5 @@
 import React from 'react';
-import { type ButtonProps } from '../../types';
+import { type ButtonProps } from '@/types';
 
 const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
@@ -19,8 +19,10 @@ const Button: React.FC<ButtonProps> = ({
     primary:
       'w-48 shadow-button-inset text-base-white font-semibold bg-primary-200 hover:bg-primary-300 focus:ring-primary-100',
     secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
+    // outline:
+    //   'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
     outline:
-      'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+      'text-main-color bg-base-white dark:bg-base-black hover:bg-blue-50 focus:ring-blue-500',
   };
 
   // Size styles
