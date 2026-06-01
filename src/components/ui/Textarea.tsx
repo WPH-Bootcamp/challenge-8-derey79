@@ -1,14 +1,5 @@
 import { useId } from 'react';
-
-interface TextareaProps {
-  label: string;
-  name: string;
-  value: string;
-  onChange: (e: { target: { name: string; value: string } }) => void;
-  placeholder?: string;
-  required?: boolean;
-  rows?: number;
-}
+import type { TextareaProps } from '@/types';
 
 export default function Textarea({
   label,

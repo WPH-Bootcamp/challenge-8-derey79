@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { useTheme } from '../../context/ThemeContext';
-import type { TimelineCardProps } from '../../types';
-import iconChevron from '../../assets/chevron-down.png';
-import iconChevronBlack from '../../assets/chevron-down-bl.png';
+import { useTheme } from '@/context/ThemeContext';
+import type { TimelineCardProps } from '@/types';
+import iconChevron from '@/assets/chevron-down.png';
+import iconChevronBlack from '@/assets/chevron-down-bl.png';
 
 export default function TimelineCard({
   title,
