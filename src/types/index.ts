@@ -96,6 +96,33 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
+export interface InputProps {
+  label: string;
+  type?: 'text' | 'email' | 'password' | 'number';
+  name: string;
+  value: string;
+  onChange: (e: { target: { name: string; value: string } }) => void;
+  placeholder?: string;
+  required?: boolean;
+}
+
+export interface TextareaProps {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (e: { target: { name: string; value: string } }) => void;
+  placeholder?: string;
+  required?: boolean;
+  rows?: number;
+}
+
+export interface CheckboxGroupProps {
+  label: string;
+  options: string[];
+  selectedValues: string[];
+  onChange: (value: string) => void;
+}
+
 // ==========================================
 // 📦 Section Data Types
 // ==========================================
@@ -141,6 +168,82 @@ export interface SolutionCard {
 
 export interface SolutionCardProps {
   items: SolutionCard[];
+}
+
+export interface ServiceCardItem {
+  id: number;
+  title: string;
+  desc: string;
+  icon: string;
+}
+
+// Industry Section //
+export interface TabButtonProps {
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+export interface SolutionCardProps {
+  title: string;
+  description: string;
+  iconImg: string;
+  iconAlt?: string;
+}
+
+export interface IndustryTab {
+  id: string;
+  label: string;
+  description: string;
+  imageSrc: string;
+  imageAlt?: string;
+}
+
+export interface IndustryCardProps {
+  tabs: IndustryTab[];
+  activeTabId: string;
+  onTabChange: (id: string) => void;
+}
+
+// Testimonial /
+
+export interface TestimonialCardProps {
+  id: number;
+  name: string;
+  position: string;
+  message: string;
+  avatar?: string;
+  rating?: number;
+}
+
+export interface projectItem {
+  id: number;
+  name: string;
+  desc: string;
+  image: string;
+}
+
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+// Form contact Modal //
+export interface ModalPopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+  iconSrc: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+}
+
+// Footer //
+export interface SocialMedia {
+  icon: string;
+  alt?: string;
+  href?: string;
 }
 
 /**
