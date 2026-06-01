@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Section } from '../layout/Section';
 import { SectionHeader } from '../layout/SectionHeader';
 import { TestimonialCard } from '../ui/CardTestimonial';
-import { testimonialData } from '../../data/testimonialData';
+import { testimonialData } from '@/data/testimonialData';
 
-export const TestimonialSection: React.FC = () => {
+const TestimonialSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const [activeIndex, setActiveIndex] = useState(1);
@@ -44,7 +44,6 @@ export const TestimonialSection: React.FC = () => {
     }
   };
 
-  // 3. Sinkronisasi titik aktif saat user melakukan scroll/swipe manual
   const handleScroll = () => {
     if (scrollRef.current) {
       const container = scrollRef.current;
@@ -120,3 +119,5 @@ export const TestimonialSection: React.FC = () => {
     </Section>
   );
 };
+
+export default TestimonialSection;
