@@ -1,14 +1,8 @@
 // 1. Import your local asset assets
-import imgPorto1 from '../../src/assets/porto-card1.png';
-import imgPorto2 from '../../src/assets/porto-card2.png';
-import imgPorto3 from '../../src/assets/porto-card3.png';
-
-export interface projectItem {
-  id: number;
-  name: string;
-  desc: string;
-  image: string;
-}
+import imgPorto1 from '@/assets/porto-card1.png';
+import imgPorto2 from '@/assets/porto-card2.png';
+import imgPorto3 from '@/assets/porto-card3.png';
+import type { projectItem } from '@/types';
 
 export const projectData: projectItem[] = [
   {
