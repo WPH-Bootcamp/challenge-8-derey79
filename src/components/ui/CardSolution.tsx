@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { type CardSolutionProps } from '../../types';
+import { type CardSolutionProps } from '@/types';
 
 const cardVariants: Variants = {
   hidden: {
@@ -25,7 +25,7 @@ export const CardSolution: React.FC<CardSolutionProps> = ({
   return (
     <motion.div
       variants={cardVariants}
-      className='flex flex-col items-center justify-center gap-2 size-40 md:size-48 mx-auto rounded-full bg-neutral-50 dark:bg-neutral-950 border border-natural-150 dark:border-natural-900 shadow-sm text-center transition-transform duration-300 hover:scale-105'
+      className='flex flex-col items-center justify-center gap-2 size-40 md:size-48 mx-auto rounded-full border card-base shadow-sm text-center transition-transform duration-300 hover:scale-105'
     >
       <div className='w-full flex flex-col items-center justify-center'>
         <h3 className='mb-1 text-4xl font-bold tracking-tight text-primary-200 line-clamp-1'>
