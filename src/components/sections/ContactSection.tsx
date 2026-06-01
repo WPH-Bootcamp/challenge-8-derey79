@@ -3,22 +3,19 @@ import { useState } from 'react';
 import { Section } from '../layout/Section';
 import { SectionHeader } from '../layout/SectionHeader';
 import Input from '../ui/Input';
-import Textarea from '../ui/TextArea';
+import Textarea from '../ui/Textarea';
 import CheckboxGroup from '../ui/CheckboxGroup';
 import Button from '../ui/Button';
 import ModalPopup from '../ui/ModalPopup';
-import iconSentSuccess from '../../assets/sent-success.png';
+import iconSentSuccess from '@/assets/sent-success.png';
 
 export default function ContactSection() {
-  // State untuk menyimpan data input form
-  // State untuk menyimpan data input form
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  // State untuk melacak layanan yang dipilih (checkboxes)
   const [selectedServices, setSelectedServices] = useState<string[]>([
     'Web Development',
   ]);
@@ -26,7 +23,7 @@ export default function ContactSection() {
   // State untuk mengontrol visibilitas modal popup
   const [isOpen, setIsOpen] = useState(false); /*true*/
 
-  // Daftar opsi layanan yang tersedia
+  // Array servis
   const serviceOptions = [
     'Web Development',
     'Cloud Solutions',
@@ -36,13 +33,11 @@ export default function ContactSection() {
     'Other',
   ];
 
-  // Fungsi untuk menangani perubahan input teks/textarea (Menggunakan tipe inline)
   const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Fungsi untuk perubahan checkbox
   const handleCheckboxChange = (service: string) => {
     setSelectedServices((prev) =>
       prev.includes(service)
@@ -51,7 +46,6 @@ export default function ContactSection() {
     );
   };
 
-  // Fungsi saat form dikirim saat on submit
   const handleSubmit = (e: React.BaseSyntheticEvent) => {
     e.preventDefault();
 
@@ -60,13 +54,12 @@ export default function ContactSection() {
 
     setIsOpen(true);
 
-    // Reset isi form setelah sukses
     setFormData({ name: '', email: '', message: '' });
     setSelectedServices(['Web Development']);
   };
 
   return (
-    <Section id='contact' className='text-center'>
+    <Section id='' className='text-center'>
       <SectionHeader
         title='Ready to Start? Let’s Talk.'
         description='Tell us what you need, and we’ll get back to you soon.'
@@ -120,7 +113,6 @@ export default function ContactSection() {
               />
             </div>
 
-            {/* Component Button send Email dengan tipe Submit */}
             <div className='pt-4'>
               <Button
                 type='submit'
