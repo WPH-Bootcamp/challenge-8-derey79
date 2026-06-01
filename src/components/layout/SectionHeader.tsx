@@ -1,5 +1,5 @@
 import React from 'react';
-import type { SectionHeaderProps } from '../../types';
+import type { SectionHeaderProps } from '@/types';
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
@@ -8,10 +8,10 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <div className={` ${className}`}>
-      <h2 className='pb-4 text-section-title text-main-color font-bold'>
+      <h2 className='px-2 py-4 text-section-title text-fluid-title text-main-color font-bold'>
         {title}
       </h2>
-      <p className='pb-4 text-sm md:text-lg text-content-color'>
+      <p className='px-2 pb-4 text-sm md:text-lg text-content-color'>
         {description}
       </p>
     </div>
