@@ -7,16 +7,16 @@ import { useTheme } from '@/context/ThemeContext';
 import Hamburger from '@/assets/hamburger-menu.png';
 import X from '@/assets/x-close.png';
 
-const THEME_BTN_BASE: string =
-  'group p-2 rounded-lg bg-transparent transition-colors duration-200 shrink-0';
+const THEME_BTN_BASE =
+  'group p-2 rounded-lg bg-transparent transition-colors duration-200 shrink-0' as const;
 const ICON_BASE: string =
   'transition-transform duration-200 group-hover:scale-110';
-const NAV_LINK_CLASS: string =
-  'block rounded-full px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800 hover:text-white text-main-color';
+const NAV_LINK_CLASS =
+  'block rounded-full px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800 hover:text-white text-main-color' as const;
 
-const SCROLLED_MENU_CLASS: string =
-  'bg-base-white/70 dark:bg-base-black/20 backdrop-blur-md';
-const NOT_SCROLLED_MENU_CLASS: string = 'shadow-none';
+const SCROLLED_MENU_CLASS =
+  'bg-base-white/70 dark:bg-base-black/20 backdrop-blur-md' as const;
+const NOT_SCROLLED_MENU_CLASS = 'shadow-none' as const;
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
