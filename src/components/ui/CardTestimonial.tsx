@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { TestimonialCardProps } from '../../types';
-import quoteIcon from '../../assets/quote-filled.png';
-
-// export interface TestimonialCardProps {
-//   id: number;
-//   name: string;
-//   position: string;
-//   message: string;
-//   avatar?: string;
-//   rating?: number;
-// }
+import type { TestimonialCardProps } from '@/types';
+import quoteIcon from '@/assets/quote-filled.png';
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   message,
