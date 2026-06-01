@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { type TimelineProps } from '../../types';
+import { type TimelineProps } from '@/types';
 import TimelineCard from '../ui/TimelineCard';
 
 export const OurProcessSection: React.FC<TimelineProps> = ({ items }) => {
