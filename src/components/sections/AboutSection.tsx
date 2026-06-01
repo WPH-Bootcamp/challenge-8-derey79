@@ -1,10 +1,10 @@
 // import { Section } from '../layout/Section';
 import { motion, type Transition, type Variants } from 'framer-motion';
-import { type BrandLogo } from '../../types';
-import { CardSolution } from '../ui/CardSolution';
-import { servicesData } from '../../data/service';
-import { doubleLogos } from '../../data/logo';
 import { Section } from '../layout/Section';
+import { CardSolution } from '../ui/CardSolution';
+import { type BrandLogo } from '@/types';
+import { servicesData } from '@/data/service';
+import { doubleLogos } from '@/data/logo';
 
 const marqueeAnimation = {
   animate: { x: [0, '-50%'] },
@@ -35,9 +35,6 @@ export default function AboutSection() {
         </h2>
 
         <div className='h-32 md:h-50 w-full flex items-center text-main-color overflow-hidden relative mask-[linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]'>
-          {/* <div className='absolute inset-y-0 left-0 w-20 z-10 pointer-events-none' />
-          <div className='absolute inset-y-0 right-0 w-20 z-10 pointer-events-none' /> */}
-
           <motion.div
             className='flex whitespace-nowrap gap-16 items-center pr-16'
             animate={marqueeAnimation.animate}
@@ -45,9 +42,9 @@ export default function AboutSection() {
             // Controls the pause smoothly via Framer Motion's state system
             whileHover={{ animationPlayState: 'paused' }}
           >
-            {doubleLogos.map((logo: BrandLogo, index: number) => (
+            {doubleLogos.map((logo: BrandLogo) => (
               <img
-                key={`${logo.alt}-${index}`}
+                key={`${logo.alt}-Math.random()`}
                 src={logo.src}
                 alt={logo.alt}
                 className='h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0 cursor-pointer'
@@ -57,12 +54,12 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div className='max-w-6xl mx-auto px-4 pt-4'>
+      <div className='max-w-6xl mx-auto max-h-170 md:max-h-150 h-screen px-4 pt-12'>
         <div className='flex flex-col gap-3 md:gap-4'>
-          <h2 className='text-fluid-title font-bold text-main-color tracking-wider leading-9 '>
+          <h2 className='text-fluid-title font-bold text-main-color tracking-wider leading-9'>
             End-to-End IT Solutions That Drive Results
           </h2>
-          <p className='pb-4 text-sm md:text-lg text-main-color'>
+          <p className='pb-12 text-sm md:text-lg text-content-color'>
             From strategy to execution, we deliver solutions that grow your
             business.
           </p>
