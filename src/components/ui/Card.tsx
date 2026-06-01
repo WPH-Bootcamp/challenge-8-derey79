@@ -17,7 +17,7 @@ export const Card: React.FC<SolutionCardProps> = ({
   return (
     <div className='relative mt-8 flex h-38 w-full flex-col justify-end rounded-2xl border border-natural-900 bg-base-black p-6 pt-12 shadow-md'>
       {/* Container Icon PNG */}
-      <div className='absolute top-0 left-6 -mt-8 flex size-14 items-center justify-center rounded-xl shadow-lg shadow-orange-950/20'>
+      <div className='absolute top-0 left-6 -mt-4 flex size-14 items-center justify-center rounded-xl shadow-lg shadow-orange-950/20 border-2'>
         <img
           src={iconUrl}
           alt={iconAlt || title}
