@@ -1,9 +1,4 @@
-// src/data/faqData.ts
-export interface FAQItem {
-  id: number;
-  question: string;
-  answer: string;
-}
+import type { FAQItem } from '@/types';
 
 export const faqData: FAQItem[] = [
   {
