@@ -11,24 +11,23 @@ export const faqData: FAQItem[] = [
     id: 2,
     question: 'How do I know if this is right for my business?',
     answer:
-      'We analyze your current business scale and provide custom digital solutions tailored to your target goals.',
+      'Book a free consult — we’ll assess your goals and recommend the right approach.',
   },
   {
     id: 3,
     question: 'How much does a project cost?',
     answer:
-      'Project costs vary depending on features, complexity, and scope. Contact us for a detailed custom quote.',
+      'Every project is different. Let’s talk about your needs to get a tailored estimate.',
   },
   {
     id: 4,
     question: 'How long does it take?',
     answer:
-      'A typical MVP project takes 4–8 weeks, while enterprise platforms may scale based on milestones.',
+      'Depends on scope — but we always prioritize quality and deadlines.',
   },
   {
     id: 5,
     question: 'Can I start with a small project first?',
-    answer:
-      'Absolutely. We highly recommend starting with a Minimum Viable Product (MVP) to validate your vision.',
+    answer: 'Absolutely. We often begin with MVPs or pilot projects.',
   },
 ];
