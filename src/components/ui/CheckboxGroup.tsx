@@ -1,11 +1,5 @@
 import Checkbox from './Checkbox';
-
-interface CheckboxGroupProps {
-  label: string;
-  options: string[];
-  selectedValues: string[];
-  onChange: (value: string) => void;
-}
+import type { CheckboxGroupProps } from '@/types';
 
 export default function CheckboxGroup({
   label,

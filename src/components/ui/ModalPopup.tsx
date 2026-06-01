@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import Button from './Button';
-import type { ModalPopupProps } from '../../types';
+import type { ModalPopupProps } from '@/types';
 
 const fadeInUpVariants: Variants = {
   hidden: { opacity: 0, y: 10 },

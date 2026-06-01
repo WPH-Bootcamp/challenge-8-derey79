@@ -1,14 +1,5 @@
 import { useId } from 'react';
-
-interface InputProps {
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'number';
-  name: string;
-  value: string;
-  onChange: (e: { target: { name: string; value: string } }) => void;
-  placeholder?: string;
-  required?: boolean;
-}
+import type { InputProps } from '@/types';
 
 export default function Input({
   label,
