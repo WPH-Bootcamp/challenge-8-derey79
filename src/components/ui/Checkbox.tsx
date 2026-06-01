@@ -1,4 +1,4 @@
-import iconCheck from '../../assets/icon-checked.png';
+import iconCheck from '@/assets/icon-checked.png';
 interface CheckboxProps {
   label: string;
   isChecked: boolean;
