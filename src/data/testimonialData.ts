@@ -1,7 +1,7 @@
 import type { TestimonialCardProps } from '../types';
-import avatarLee from '../../src/assets/john-lee.png';
-import avatarSarah from '../../src/assets/sarah-tan.png';
-import avatarChan from '../../src/assets/emily-can.png';
+import avatarLee from '@/assets/john-lee.png';
+import avatarSarah from '@/assets/sarah-tan.png';
+import avatarChan from '@/assets/emily-can.png';
 
 export const testimonialData: TestimonialCardProps[] = [
   {
