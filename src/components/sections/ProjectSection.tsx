@@ -2,7 +2,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { Section } from '../layout/Section';
 import { SectionHeader } from '../layout/SectionHeader';
-import { projectData } from '../../data/projectData';
+import { projectData } from '@/data/projectData';
 
 // Explicitly type the fading variants mapping block
 const staggerFadeVariants: Variants = {
