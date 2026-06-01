@@ -166,9 +166,9 @@ export interface SolutionCard {
   iconAlt?: string;
 }
 
-export interface SolutionCardProps {
-  items: SolutionCard[];
-}
+// export interface SolutionCardProps {
+//   items: SolutionCard[];
+// }
 
 export interface ServiceCardItem {
   id: number;
